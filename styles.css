@@ -1,0 +1,403 @@
+/* *, *:before, *:after {
+    box-sizing: border-box;
+}
+body {
+    color: #37393b;
+    display: flex;
+    height: 100vh;
+    font-family: 'Audiowide', cursive;
+    text-rendering: optimizeLegibility;
+    text-rendering: geometricPrecision;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    color: #93c3ab;
+    background: linear-gradient(#2f4445, 80%, #171b1e);
+    background-color: #171b1e;
+    overflow: hidden;
+} */
+
+.site-header {
+    background-color: rgba(0, 0, 0, .85);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    backdrop-filter: saturate(180%) blur(20px);
+}
+
+.site-header a {
+    color: #999;
+    transition: ease-in-out color .15s;
+}
+
+.wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('http://www.milanmilosev.com/external/codepen/img/hexagon_small.png');
+    
+    /* background-image: url('/images/robot.png'); */
+
+    opacity: 0.4;
+}
+
+
+.card_container {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    position: relative;
+    background: #eee;
+    /* background: linear-gradient(240deg, rgba(150, 50, 50, 0.3), rgba(0, 0, 200, 0)); */
+}
+nav ul {
+    margin: 20px 20px 0 20px;
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+}
+nav li a {
+    display: block;
+    width: 50px;
+    text-align: center;
+    color: #aaa;
+    cursor: pointer;
+}
+nav li a:hover {
+    color: #444;
+}
+nav li a.active {
+    color: #44f;
+}
+
+#mainCityCard {
+    box-shadow: 9px 7px 40px -6px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+    /* width: 100%; */
+    padding: 0;
+    height: 350px;
+    /* min-height: 300px; */
+    margin: 20px 20px;
+    border-radius: 5px;
+    position: relative;
+    padding: 20px;
+}
+#mainCityCard .details {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 16px 20px;
+    color: #888;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    transition: color 2s ease;
+}
+
+.city {
+    margin-left: 90px;
+    height: 80px;
+    width: 410px;
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+h2.city-name {
+    /* width: 340px; */
+    height: 50px;
+    margin: 0 auto;
+    /* padding-top: 20px; */
+    border-bottom: 2px solid #5D6068;
+    /* color: #E0E1E3;*/
+}
+
+i.fa-cloud {
+    /* margin-top: 30px;
+    margin-left: 80px; */
+    color: #5D6068;
+}
+
+.weather_main {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-left: 90px;
+    margin-top: 72px;
+    width: 410px;
+    height: 250px;
+}
+
+.celcius {
+    display: block;
+    margin-left: 340px;
+    margin-top: -105px;
+    font-size: 22px;
+    width: 20px;
+    height: 23px;
+    padding-left: 10px;
+    border-left: 1px solid #5D6068;
+    color: #5D6068;
+}
+
+.tempContainer
+{
+    padding-left: 70px;
+    padding-top: 30px;
+}
+
+.mainCityWeather
+{
+
+}
+
+#card {
+    box-shadow: 9px 7px 40px -6px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+    width: 300px;
+    padding: 0;
+    height: 400px;
+    min-height: 300px;
+    margin: 20px;
+    border-radius: 5px;
+    position: relative;
+}
+#card .details {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 16px 20px;
+    color: rgb(241, 255, 255);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    transition: color 2s ease;
+}
+.thunder #card .details {
+    color: #ddd;
+}
+#card .details .right {
+    text-align: right;
+}
+#card .details #date {
+    margin: 4px 0;
+}
+#card .details #summary {
+    font-weight: 600;
+    font-size: 22px;
+}
+#card .details .temp {
+    font-size: 20px;
+    line-height: 60px;
+}
+#card .details .temp span {
+    font-size: 18px;
+    line-height: 30px;
+    vertical-align: top;
+    margin-left: 5px;
+}
+.weather {
+    background-image: linear-gradient(-120deg, #91f36a,#008CB3);
+    /* transition: background-color 2s ease; */
+}
+.thunder .weather {
+    background-color: #9fa4ad;
+}
+.rain .weather {
+    background-color: #d8d8d8;
+}
+.sun .weather {
+    background-color: #ccf;
+}
+.weather #inner {
+    background-color: rgba(255, 255, 255, 1);
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0) 100%);
+}
+.weather .cloud {
+    transition: fill 2s ease;
+}
+.weather #cloud1 {
+    fill: #efefef;
+}
+.thunder .weather #cloud1 {
+    fill: #9fa4ad;
+}
+.weather #cloud2 {
+    fill: #e6e6e6;
+}
+.thunder .weather #cloud2 {
+    fill: #8b8e98;
+}
+.weather #cloud3 {
+    fill: #d5d5d5;
+}
+.thunder .weather #cloud3 {
+    fill: #7b7988;
+}
+#outer, #back {
+    position: fixed;
+    pointer-events: none;
+}
+
+
+
+.weather-card {
+    margin: 60px auto;
+    height: 780px;
+    width: 450px;
+    background: #fff;
+    box-shadow: 0 1px 38px rgba(0, 0, 0, 0.15), 0 5px 12px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+  }
+  .weather-card .top {
+    position: relative;
+    height: 570px;
+    width: 100%;
+    overflow: hidden;
+    background: url("https://s-media-cache-ak0.pinimg.com/564x/cf/1e/c4/cf1ec4b0c96e59657a46867a91bb0d1e.jpg") no-repeat;
+    background-size: cover;
+    background-position: center center;
+    text-align: center;
+  }
+  .weather-card .top .wrapper {
+    padding: 30px;
+    position: relative;
+    z-index: 1;
+  }
+  .weather-card .top .wrapper .mynav {
+    height: 20px;
+  }
+  .weather-card .top .wrapper .mynav .lnr {
+    color: #fff;
+    font-size: 20px;
+  }
+  .weather-card .top .wrapper .mynav .lnr-chevron-left {
+    display: inline-block;
+    float: left;
+  }
+  .weather-card .top .wrapper .mynav .lnr-cog {
+    display: inline-block;
+    float: right;
+  }
+  .weather-card .top .wrapper .heading {
+    margin-top: 20px;
+    font-size: 35px;
+    font-weight: 400;
+    color: #fff;
+  }
+  .weather-card .top .wrapper .location {
+    margin-top: 20px;
+    font-size: 21px;
+    font-weight: 400;
+    color: #fff;
+  }
+  .weather-card .top .wrapper .temp {
+    margin-top: 20px;
+  }
+  .weather-card .top .wrapper .temp a {
+    text-decoration: none;
+    color: #fff;
+  }
+  .weather-card .top .wrapper .temp a .temp-type {
+    font-size: 85px;
+  }
+  .weather-card .top .wrapper .temp .temp-value {
+    display: inline-block;
+    font-size: 85px;
+    font-weight: 600;
+    color: #fff;
+  }
+  .weather-card .top .wrapper .temp .deg {
+    display: inline-block;
+    font-size: 35px;
+    font-weight: 600;
+    color: #fff;
+    vertical-align: top;
+    margin-top: 10px;
+  }
+  .weather-card .top:after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+  }
+  .weather-card .bottom {
+    padding: 0 30px;
+    background: #fff;
+  }
+  .weather-card .bottom .wrapper .forecast {
+    /* overflow: hidden; */
+    margin: 0;
+    font-size: 0;
+    padding: 0;
+    padding-top: 20px;
+    max-height: 155px;
+  }
+  .weather-card .bottom .wrapper .forecast a {
+    text-decoration: none;
+    color: #000;
+  }
+  .weather-card .bottom .wrapper .forecast .go-up {
+    text-align: center;
+    display: block;
+    font-size: 25px;
+    margin-bottom: 10px;
+  }
+  .weather-card .bottom .wrapper .forecast li {
+    display: block;
+    font-size: 25px;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.25);
+    line-height: 1em;
+    margin-bottom: 30px;
+  }
+  .weather-card .bottom .wrapper .forecast li .infoLabel {
+    display: inline-block;
+  }
+  .weather-card .bottom .wrapper .forecast li .condition {
+    display: inline-block;
+    vertical-align: middle;
+    float: right;
+    font-size: 25px;
+  }
+  .weather-card .bottom .wrapper .forecast li .condition .temp {
+    display: inline-block;
+    vertical-align: top;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    padding-top: 2px;
+  }
+  .weather-card .bottom .wrapper .forecast li .condition .temp .deg {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 600;
+    margin-left: 3px;
+    vertical-align: top;
+  }
+  .weather-card .bottom .wrapper .forecast li .condition .temp .temp-type {
+    font-size: 20px;
+  }
+  .weather-card .bottom .wrapper .forecast li.active {
+    color: rgba(0, 0, 0, 0.8);
+  }
+  .weather-card.rain .top {
+    background: url("http://img.freepik.com/free-vector/girl-with-umbrella_1325-5.jpg?size=338&ext=jpg") no-repeat;
+    background-size: cover;
+    background-position: center center;
+  }
+  
